@@ -1,27 +1,53 @@
 .navbar {
-    height: 50px;
-    background-color: #003580;
-    display: flex;
-    justify-content: center;
+  height: 60px;
+  background-color: #003580;
+  display: flex;
+  justify-content: center;
 }
 
 .navContainer {
-    width: 100%;
-    max-width: 1024px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
 }
 
 .logo {
-    font-weight: 500;
+  font-weight: 700;
+  margin-left: 28px;
+  line-height: 20px;
 }
 
 .navButton {
-    margin-left: 20px;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    color: #003580;
+  margin-left: 10px;
+  margin-top: 8px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #0071c2;
+  font-weight: 500;
+  height: 100%;
+}
+
+.navButtonfx {
+  margin-left: 10px;
+  margin-top: 8px;
+  border: 1px solid white;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  height: 100%;
+  background-color: #003580;
+}
+
+.navButtonfx:hover {
+  background-color: rgba(31, 78, 143);
+}
+.navItem {
+  margin-right: 28px;
+  height: 36px;
 }
