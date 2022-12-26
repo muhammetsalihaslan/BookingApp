@@ -6,6 +6,9 @@ const Navbar = () => {
       <div className="navContainer">
         <span className="logo">msaBooking</span>
         <div className="navItem">
+          <span>TRY</span>
+          <span></span>
+          <span></span>
           <button className="navButtonfx">List your property</button>
           <button className="navButton">Register</button>
           <button className="navButton">Sign in</button>
