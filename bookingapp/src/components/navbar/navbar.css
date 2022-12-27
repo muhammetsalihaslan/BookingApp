@@ -68,6 +68,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: 0.5s;
+  z-index: 0;
 }
 
 .tbtn:hover {
