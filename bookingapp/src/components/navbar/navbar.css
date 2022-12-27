@@ -46,6 +46,7 @@
   font-weight: 600;
   height: 38px;
   background-color: #003580;
+  transition: 0.5s;
 }
 
 .navButtonfx:hover {
@@ -66,6 +67,7 @@
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .tbtn:hover {
