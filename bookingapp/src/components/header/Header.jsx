@@ -37,6 +37,12 @@ const Header = () => {
           </div>
         </div>
         <h1 className="headerTitle">Find your next stay</h1>
+        <p className="headerDesc">
+          Search deals on hotels, homes, and much more...
+        </p>
+        <div className="headerSearch">
+          <div className="headerSearchItem"></div>
+        </div>
       </div>
     </div>
   );
