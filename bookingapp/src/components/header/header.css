@@ -3,6 +3,7 @@
   color: white;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .headerContainer {
@@ -48,4 +49,52 @@
 .headerDesc {
   font-size: 24px;
   margin-left: 3px;
+}
+
+.headerSearch {
+  height: 30px;
+  background-color: white;
+  border: 4px solid #febb02;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  max-width: 1020px;
+}
+
+.headerIcon {
+  color: lightgrey;
+  margin-left: 10px;
+}
+
+.headerBtn {
+  background-color: #0071c2;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  margin-right: 0;
+}
+
+.headerSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerSearchInput {
+  border: none;
+  outline: none;
+}
+
+.headerSearchText {
+  color: lightgray;
+  cursor: pointer;
 }
