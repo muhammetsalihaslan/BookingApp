@@ -111,12 +111,7 @@ const Header = () => {
           </div>
           <div className="headerSearchItem">
             <FontAwesomeIcon icon={faPerson} className="headerIcon" />
-            <span
-              onClick={() => setOp()}
-              // onClick={() => setOpenOptions(!openOptions)}
-              // onClick={() => setOpenDate(false)}
-              className="headerSearchText"
-            >
+            <span onClick={() => setOp()} className="headerSearchText">
               {`${options.adult} adult • ${options.children} children • ${options.room} room`}
             </span>
             {openOptions && (
