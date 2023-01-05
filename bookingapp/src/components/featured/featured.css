@@ -1,0 +1,17 @@
+.featured {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.featuredItem {
+  height: 270px;
+  width: 548px;
+}
+
+.flag {
+  width: 24px;
+  height: 24px;
+}
