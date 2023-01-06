@@ -39,6 +39,9 @@ const Featured = () => {
           </div>
         </div>
       </div>
+      <div className="title">
+        <h2>Browse by property type</h2>
+      </div>
       <div className="featured">
         <div className="featuredItem">
           <img
