@@ -1,5 +1,6 @@
 import React from "react";
 import "./featured.css";
+import PropertyList from "../propertList/PropertyList";
 
 const Featured = () => {
   return (
@@ -42,6 +43,7 @@ const Featured = () => {
       <div className="title">
         <h2>Browse by property type</h2>
       </div>
+      <PropertyList />
       <div className="featured">
         <div className="featuredItem">
           <img
