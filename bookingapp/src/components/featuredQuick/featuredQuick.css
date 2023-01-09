@@ -1,0 +1,60 @@
+.pList {
+  margin-top: -20px;
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pListItem {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pListImg {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.pListTitles > h1 {
+  font-size: 15px;
+}
+
+.pListTitles > h2 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.featuredQuick {
+  display: flex;
+  margin-left: 20px;
+  gap: 40px;
+  width: 100%;
+  max-width: 1024px;
+  margin-bottom: 20px;
+}
+
+.featuredQuickItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.featuredQuickItem.active {
+  border: 1px solid #0071c2;
+  padding: 11px 16px 11px 16px;
+  border-radius: 30px;
+  background-color: #f0f7fb;
+}
+
+.featuredQuickItem:hover {
+  border: 1px solid none;
+  padding: 11px 16px 11px 16px;
+  border-radius: 30px;
+  background-color: #f0f0f0;
+  transition: 0.3s;
+}
