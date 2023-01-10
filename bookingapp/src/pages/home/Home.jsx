@@ -4,6 +4,7 @@ import Header from "../../components/header/Header";
 import Navbar from "../../components/navbar/Navbar";
 import FeaturedNext from "../../components/featuredNext/FeaturedNext";
 import "./home.css";
+import Stays from "../../components/stays/Stays";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Featured />
         <FeaturedQuick />
         <FeaturedNext />
+        <Stays />
       </div>
     </div>
   );
