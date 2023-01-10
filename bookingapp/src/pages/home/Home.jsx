@@ -5,6 +5,7 @@ import Navbar from "../../components/navbar/Navbar";
 import FeaturedNext from "../../components/featuredNext/FeaturedNext";
 import "./home.css";
 import Stays from "../../components/stays/Stays";
+import MailList from "../../components/mailList/MailList";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <FeaturedQuick />
         <FeaturedNext />
         <Stays />
+        <MailList />
       </div>
     </div>
   );
