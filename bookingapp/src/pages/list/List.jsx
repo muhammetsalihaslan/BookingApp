@@ -60,6 +60,15 @@ const List = () => {
                 {`${options.adult} adult • ${options.children} children • ${options.room} room`}
               </span>
             </div>
+            <div className="lsItems">
+              <input type="checkbox" />
+              <label>Entire homes & apartments</label>
+            </div>
+            <div className="lsItems">
+              <input type="checkbox" />
+              <label>I'm traveling for work</label>
+            </div>
+            <button className="search">Search</button>
           </div>
           <div className="listResult"></div>
         </div>
