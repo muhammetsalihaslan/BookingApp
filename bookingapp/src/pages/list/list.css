@@ -78,6 +78,10 @@
   padding: 3px;
 }
 
+.lsItems > input {
+  cursor: pointer;
+}
+
 .lsItems > label {
   font-size: 12px;
 }
@@ -90,4 +94,11 @@
   border: none;
   color: white;
   font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search:hover {
+  background-color: #00487a;
+  transition: 0.3s;
 }
