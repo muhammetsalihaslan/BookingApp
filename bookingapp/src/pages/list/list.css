@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  position: relative;
 }
 
 .listWrapper {
@@ -27,4 +28,37 @@
 
 .listResult {
   flex: 3;
+}
+
+.lsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.lsItem > label {
+  font-size: 12px;
+}
+
+.lsItem > input {
+  height: 30px;
+  border: none;
+  padding: 5px;
+}
+
+.lsItem > span {
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.opendate {
+  width: 100%;
+  max-width: 1009px;
+  position: absolute;
+  top: 180px;
 }
