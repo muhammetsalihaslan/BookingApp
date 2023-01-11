@@ -12,6 +12,27 @@ const List = () => {
   const [date, setDate] = useState(location.state.date);
   const [options, setOptions] = useState(location.state.options);
   const [openDate, setOpenDate] = useState(false);
+  const [openOptions, setOpenOptions] = useState(false);
+
+  const handleOption = (name, operation) => {
+    setOptions((prev) => {
+      return {
+        ...prev,
+        [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
+      };
+    });
+  };
+
+  const setOpl = () => {
+    setOpenOptions(!openOptions);
+    setOpenDate(false);
+  };
+
+  const setOpD = () => {
+    setOpenDate(!openDate);
+    setOpenOptions(false);
+  };
+
   return (
     <div>
       <Navbar />
@@ -26,11 +47,17 @@ const List = () => {
             </div>
             <div className="lsItem">
               <label>Check-in Date:</label>
-              <span onClick={() => setOpenDate(!openDate)}>
+              <span onClick={() => setOpD()}>
                 {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
                   date[0].endDate,
                   "MM/dd/yy"
                 )}`}
+              </span>
+            </div>
+            <div className="lsItem">
+              <label>Option</label>
+              <span onClick={() => setOpl()}>
+                {`${options.adult} adult • ${options.children} children • ${options.room} room`}
               </span>
             </div>
           </div>
@@ -43,6 +70,71 @@ const List = () => {
               minDate={new Date()}
               ranges={date}
             />
+          )}
+        </div>
+        <div className="openOptions">
+          {openOptions && (
+            <div className="options">
+              <div className="optionItem">
+                <span className="optionText">Adult</span>
+                <div className="optionCounter">
+                  <button
+                    disabled={options.adult <= 1}
+                    className="optionCounterButton"
+                    onClick={() => handleOption("adult", "d")}
+                  >
+                    -
+                  </button>
+                  <span className="optionCounterNumber">{options.adult}</span>
+                  <button
+                    className="optionCounterButton"
+                    onClick={() => handleOption("adult", "i")}
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div className="optionItem">
+                <span className="optionText">Children</span>
+                <div className="optionCounter">
+                  <button
+                    disabled={options.children <= 0}
+                    className="optionCounterButton"
+                    onClick={() => handleOption("children", "d")}
+                  >
+                    -
+                  </button>
+                  <span className="optionCounterNumber">
+                    {options.children}
+                  </span>
+                  <button
+                    className="optionCounterButton"
+                    onClick={() => handleOption("children", "i")}
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div className="optionItem">
+                <span className="optionText">Room</span>
+                <div className="optionCounter">
+                  <button
+                    disabled={options.room <= 1}
+                    className="optionCounterButton"
+                    onClick={() => handleOption("room", "d")}
+                  >
+                    -
+                  </button>
+                  <span className="optionCounterNumber">{options.room}</span>
+                  <button
+                    className="optionCounterButton"
+                    onClick={() => handleOption("room", "i")}
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
           )}
         </div>
       </div>

@@ -62,3 +62,10 @@
   position: absolute;
   top: 180px;
 }
+
+.openOptions {
+  width: 100%;
+  max-width: 1009px;
+  position: absolute;
+  top: 197px;
+}
