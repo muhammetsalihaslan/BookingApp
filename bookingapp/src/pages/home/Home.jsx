@@ -6,6 +6,7 @@ import FeaturedNext from "../../components/featuredNext/FeaturedNext";
 import "./home.css";
 import Stays from "../../components/stays/Stays";
 import MailList from "../../components/mailList/MailList";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <FeaturedNext />
         <Stays />
         <MailList />
+        <Footer />
       </div>
     </div>
   );
