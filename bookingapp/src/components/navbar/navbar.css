@@ -1,5 +1,5 @@
 .navbar {
-  height: 70px;
+  height: 90px;
   background-color: #003580;
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@
   height: 36px;
 }
 
-.tbtn {
+.tbtnC {
   max-height: 48px;
   max-width: 48px;
   padding: 12px;
@@ -71,10 +71,52 @@
   margin-right: 7px;
 }
 
-.tbtn:hover {
+.tbtnC:hover {
   background-color: rgba(31, 78, 143);
 }
 
+.hide {
+  position: absolute;
+  top: 70px;
+  font-size: 12px;
+  background-color: black;
+}
+
+.tbtnL {
+  max-height: 48px;
+  max-width: 48px;
+  padding: 12px;
+  background-color: #003580;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-right: 7px;
+}
+
+.tbtnL:hover {
+  background-color: rgba(31, 78, 143);
+}
+
+.tbtnQ {
+  max-height: 48px;
+  max-width: 48px;
+  padding: 12px;
+  background-color: #003580;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-right: 7px;
+}
+
+.tbtnQ:hover {
+  background-color: rgba(31, 78, 143);
+}
 .que {
   font-size: 16px;
   height: 20px;
