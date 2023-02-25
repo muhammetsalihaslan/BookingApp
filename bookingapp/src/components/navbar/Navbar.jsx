@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isHoveringL, setIsHoveringL] = useState(false);
   const [isHoveringQ, setIsHoveringQ] = useState(false);
   const [open, setOpen] = useState(false);
+
   const handleMouseOver = () => {
     setIsHovering(true);
   };
@@ -29,6 +30,11 @@ const Navbar = () => {
     setIsHoveringQ(false);
   };
 
+  const handleClick = () => {
+    navigate("/", { state: { open } });
+    setOpen(true);
+  };
+
   return (
     <div className="navbar">
       <div className="navContainer">
@@ -41,6 +47,7 @@ const Navbar = () => {
             className="tbtnC"
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
+            onClick={() => handleClick()}
           >
             TRY
           </button>
