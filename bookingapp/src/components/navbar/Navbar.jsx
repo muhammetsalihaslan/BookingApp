@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Currency from "../currency/Currency";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -31,7 +32,6 @@ const Navbar = () => {
   };
 
   const handleClick = () => {
-    navigate("/", { state: { open } });
     setOpen(true);
   };
 
@@ -47,7 +47,7 @@ const Navbar = () => {
             className="tbtnC"
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
-            onClick={() => handleClick()}
+            onClick={handleClick}
           >
             TRY
           </button>
@@ -74,6 +74,7 @@ const Navbar = () => {
           <button className="navButton">Sign in</button>
         </div>
       </div>
+      {open && <Currency />}
     </div>
   );
 };

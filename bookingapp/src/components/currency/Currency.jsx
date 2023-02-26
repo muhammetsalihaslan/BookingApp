@@ -1,39 +1,36 @@
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import "./currency.css";
 
 const Currency = () => {
   return (
     <div className="currency">
-      <FontAwesomeIcon
-        icon={faCircleXmark}
-        className="close"
-        // onClick={() => setOpen(false)}
-      />
-      <h2>Select your currency</h2>
+      <FontAwesomeIcon icon={faCircleXmark} className="close" />
+      <h2 className="has2">Select your currency</h2>
+      <h4 style={{ marginLeft: "10px", marginTop: "10px" }}>Suggest For You</h4>
       <div className="Scurrency">
-        <h4>Suggest For You</h4>
-        <div>
+        <div className="para">
           <span>Turkish Lira</span>
           <span>TRY</span>
         </div>
-        <div>
+        <div className="para">
           <span>Euro</span>
           <span>EUR</span>
         </div>
-        <div>
+        <div className="para">
           <span>Saudi Arabian Riyal</span>
           <span>SAR</span>
         </div>
-        <div>
+        <div className="para">
           <span>U.S. Dollar</span>
           <span>USD</span>
         </div>
-        <div>
+        <div className="para">
           <span>Paund Sterling</span>
           <span>GBP</span>
         </div>
-        <div>
+        <div className="para">
           <span>Canadian Dollar</span>
           <span>CAD</span>
         </div>
