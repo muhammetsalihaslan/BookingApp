@@ -1,6 +1,9 @@
 import "./navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
+import {
+  faCircleQuestion,
+  faCircleXmark,
+} from "@fortawesome/free-regular-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Currency from "../currency/Currency";
@@ -33,6 +36,10 @@ const Navbar = () => {
 
   const handleClick = () => {
     setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
 
   return (
@@ -74,7 +81,16 @@ const Navbar = () => {
           <button className="navButton">Sign in</button>
         </div>
       </div>
-      {open && <Currency />}
+      {open && (
+        <>
+          <FontAwesomeIcon
+            icon={faCircleXmark}
+            className="closeM"
+            onClick={handleClose}
+          />
+          <Currency />
+        </>
+      )}
     </div>
   );
 };

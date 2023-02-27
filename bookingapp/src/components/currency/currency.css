@@ -21,7 +21,21 @@
 
 .para {
   margin-top: 7px;
-  border: 1px solid black;
+  border: 1px solid none;
   margin-left: 10px;
-  width: 100px;
+  width: 200px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.para:hover {
+  background-color: rgb(232, 228, 228);
+  transition: 0.5s;
+}
+
+.Acurrency {
+  display: flex;
+  flex-wrap: wrap;
 }

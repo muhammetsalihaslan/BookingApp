@@ -122,3 +122,13 @@
   height: 20px;
   width: 20px;
 }
+
+.closeM {
+  position: absolute;
+  top: 50px;
+  right: 250px;
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+  z-index: 1000;
+}
