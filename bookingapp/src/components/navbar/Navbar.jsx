@@ -7,6 +7,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Currency from "../currency/Currency";
+import { flag } from "../../data.js";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -14,6 +15,8 @@ const Navbar = () => {
   const [isHoveringL, setIsHoveringL] = useState(false);
   const [isHoveringQ, setIsHoveringQ] = useState(false);
   const [open, setOpen] = useState(false);
+  const [enter, setEnter] = useState(false);
+  const [data, setData] = useState("");
 
   const handleMouseOver = () => {
     setIsHovering(true);
@@ -42,6 +45,19 @@ const Navbar = () => {
     setOpen(false);
   };
 
+  const handleNoEnter = () => {
+    setEnter(false);
+  };
+
+  const handleEnter = () => {
+    setEnter(true);
+  };
+
+  const handleSubmit = (event) => {
+    const imgName = event.target.imgName.value;
+    setData(imgName);
+  };
+
   return (
     <div className="navbar">
       <div className="navContainer">
@@ -64,8 +80,9 @@ const Navbar = () => {
             className="tbtnL"
             onMouseOver={handleMouseOverL}
             onMouseOut={handleMouseOutL}
+            onClick={handleEnter}
           >
-            ENG
+            <img src={data} alt="" />
           </button>
           {isHoveringQ && <span className="hide">Costumer service help</span>}
           <button
@@ -90,6 +107,27 @@ const Navbar = () => {
           />
           <Currency />
         </>
+      )}
+      {enter && (
+        <div className="language">
+          <FontAwesomeIcon
+            icon={faCircleXmark}
+            className="closeL"
+            onClick={handleNoEnter}
+          />
+          <h2 className="has2">Select your Language</h2>
+          <h4 style={{ marginLeft: "10px", marginTop: "10px" }}>
+            Suggest For You
+          </h4>
+          <div className="slanguage">
+            {flag.map((item) => (
+              <div className="flagh" onSubmit={handleSubmit}>
+                <img src={item.img} alt="" className="imgL" name="imgName" />
+                <span>{item.title}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       )}
     </div>
   );
