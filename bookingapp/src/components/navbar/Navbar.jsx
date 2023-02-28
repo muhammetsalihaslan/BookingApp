@@ -16,7 +16,6 @@ const Navbar = () => {
   const [isHoveringQ, setIsHoveringQ] = useState(false);
   const [open, setOpen] = useState(false);
   const [enter, setEnter] = useState(false);
-  const [data, setData] = useState("");
 
   const handleMouseOver = () => {
     setIsHovering(true);
@@ -53,9 +52,8 @@ const Navbar = () => {
     setEnter(true);
   };
 
-  const handleSubmit = (event) => {
-    const imgName = event.target.imgName.value;
-    setData(imgName);
+  const handleDiv = () => {
+    setEnter(false);
   };
 
   return (
@@ -82,7 +80,7 @@ const Navbar = () => {
             onMouseOut={handleMouseOutL}
             onClick={handleEnter}
           >
-            <img src={data} alt="" />
+            ENG
           </button>
           {isHoveringQ && <span className="hide">Costumer service help</span>}
           <button
@@ -90,7 +88,11 @@ const Navbar = () => {
             onMouseOver={handleMouseOverQ}
             onMouseOut={handleMouseOutQ}
           >
-            <FontAwesomeIcon className="que" icon={faCircleQuestion} />
+            <FontAwesomeIcon
+              className="que"
+              icon={faCircleQuestion}
+              onClick={() => navigate("/help")}
+            />
           </button>
           {/* <span className="tspn">Contact Customer Service</span> */}
           <button className="navButtonfx">List your property</button>
@@ -121,8 +123,8 @@ const Navbar = () => {
           </h4>
           <div className="slanguage">
             {flag.map((item) => (
-              <div className="flagh" onSubmit={handleSubmit}>
-                <img src={item.img} alt="" className="imgL" name="imgName" />
+              <div className="flagh" onClick={handleDiv}>
+                <img src={item.img} className="imgL" />
                 <span>{item.title}</span>
               </div>
             ))}

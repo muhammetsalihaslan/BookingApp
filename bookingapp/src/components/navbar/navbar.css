@@ -150,9 +150,10 @@
 }
 
 .imgL {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 25px;
   border-radius: 50%;
+  margin: 7px;
 }
 
 .flagh {
@@ -164,6 +165,12 @@
   display: flex;
   flex-direction: column;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.flagh:hover {
+  background-color: rgb(232, 228, 228);
+  transition: 0.5s;
 }
 
 .closeL {
