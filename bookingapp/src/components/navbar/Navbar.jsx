@@ -96,8 +96,12 @@ const Navbar = () => {
           </button>
           {/* <span className="tspn">Contact Customer Service</span> */}
           <button className="navButtonfx">List your property</button>
-          <button className="navButton">Register</button>
-          <button className="navButton">Sign in</button>
+          <button className="navButton" onClick={() => navigate("/login")}>
+            Register
+          </button>
+          <button className="navButton" onClick={() => navigate("/login")}>
+            Sign in
+          </button>
         </div>
       </div>
       {open && (
